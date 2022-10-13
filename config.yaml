@@ -10,12 +10,14 @@ properties:
     type: string
     format: uri
     description: The URL of the site to start scraping
+    default: https://www.cdc.gov/nchs/pressroom/calendar/2022_Schedule.htm
   project:
     title: Project
     type: string
     description: >-
       The DocumentCloud project title or ID of the project the documents should
       be uploaded to.  If the project title does not exist, it will be created.
+    default: 210148
   keywords:
     title: Keywords
     type: string
@@ -35,7 +37,7 @@ properties:
     title: Crawl Depth
     type: integer
     description: Recursively scrape same-domain links found on the page (Must be between 0 and 2)
-    default: 0
+    default: 2
     minimum: 0
     maximum: 2
   notify_all:
